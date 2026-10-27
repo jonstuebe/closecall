@@ -1,0 +1,6 @@
+puzzle,answer,file,source,origin,license,verified
+1,cat,aad88ac752889eb1.jpg,"scikit-image sample data (chelsea)",https://scikit-image.org/docs/stable/api/skimage.data.html,"Public domain / freely redistributable sample",prototype
+2,raccoon,fc33cddafbfa396b.jpg,"SciPy sample data (face)",https://docs.scipy.org/doc/scipy/reference/datasets.html,"Public domain",prototype
+3,butterfly,f13c6d95411bd816.jpg,"OpenCV sample images",https://github.com/opencv/opencv/tree/master/samples/data,"BSD-licensed sample data",prototype
+4,mandrill,755cdfc3ea5c4862.jpg,"Standard test image (OpenCV samples)",https://github.com/opencv/opencv/tree/master/samples/data,"BSD-licensed sample data",prototype
+5,dog,f7a63fc5cb08477e.jpg,"PyTorch Hub sample image",https://github.com/pytorch/hub,"BSD-licensed sample data",prototype

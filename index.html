@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Close Call</title>
+    <meta name="description" content="A daily guessing game: name the mystery animal from a photo taken way too close. Each wrong guess zooms out." />
+    <meta name="theme-color" content="#e7ecef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#10161b" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Close Call" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <script>
+      // Apply saved theme before first paint to avoid a flash.
+      try {
+        var s = JSON.parse(localStorage.getItem('closecall:v1') || '{}').settings || {};
+        if (s.theme === 'light' || s.theme === 'dark') document.documentElement.dataset.theme = s.theme;
+        if (s.highContrast) document.documentElement.dataset.contrast = 'high';
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Close Call needs JavaScript to run.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "answer": "cat",
+    "display": "a cat",
+    "accept": ["cat", "kitten", "kitty", "tabby", "house cat", "domestic cat", "tabby cat"],
+    "photo": { "file": "aad88ac752889eb1.jpg", "width": 451, "height": 300, "credit": "“Chelsea”, scikit-image sample data" },
+    "focus": { "x": 0.47, "y": 0.3 },
+    "zooms": [6, 4.5, 3.2, 2.2, 1.5, 1],
+    "fact": "A cat's nose print is as individual as a human fingerprint — no two are the same."
+  },
+  {
+    "id": 2,
+    "answer": "raccoon",
+    "display": "a raccoon",
+    "accept": ["raccoon", "racoon", "trash panda", "coon"],
+    "photo": { "file": "fc33cddafbfa396b.jpg", "width": 1024, "height": 768, "credit": "Raccoon face, SciPy sample data" },
+    "focus": { "x": 0.52, "y": 0.3 },
+    "zooms": [10, 7, 4.5, 3, 1.8, 1],
+    "fact": "Raccoons have extraordinarily sensitive front paws, and often handle food in water before eating it."
+  },
+  {
+    "id": 3,
+    "answer": "butterfly",
+    "display": "a butterfly",
+    "accept": ["butterfly", "swallowtail", "lime swallowtail", "lime butterfly", "swallowtail butterfly"],
+    "photo": { "file": "f13c6d95411bd816.jpg", "width": 493, "height": 356, "credit": "Lime swallowtail, OpenCV sample images" },
+    "focus": { "x": 0.68, "y": 0.3 },
+    "zooms": [6, 4.5, 3.2, 2.2, 1.5, 1],
+    "fact": "Butterflies taste with their feet — chemoreceptors on their legs tell them whether a leaf is worth laying eggs on."
+  },
+  {
+    "id": 4,
+    "answer": "mandrill",
+    "display": "a mandrill",
+    "accept": ["mandrill", "baboon", "monkey", "mandrill monkey"],
+    "photo": { "file": "755cdfc3ea5c4862.jpg", "width": 512, "height": 512, "credit": "Mandrill, standard test image (OpenCV samples)" },
+    "focus": { "x": 0.5, "y": 0.55 },
+    "zooms": [7, 5, 3.5, 2.4, 1.6, 1],
+    "fact": "Mandrills are the largest monkeys in the world, and the brightness of a male's face tracks his rank."
+  },
+  {
+    "id": 5,
+    "answer": "dog",
+    "display": "a dog",
+    "accept": ["dog", "puppy", "pup", "samoyed", "spitz", "american eskimo", "american eskimo dog", "eskimo dog", "pomeranian", "doggo"],
+    "photo": { "file": "f7a63fc5cb08477e.jpg", "width": 1400, "height": 1098, "credit": "Samoyed, PyTorch Hub sample image" },
+    "focus": { "x": 0.29, "y": 0.36 },
+    "zooms": [10, 7, 4.5, 3, 1.8, 1],
+    "fact": "Samoyeds were bred by the Nenets people to herd reindeer — and to sleep piled on top of their humans for warmth."
+  }
+]
