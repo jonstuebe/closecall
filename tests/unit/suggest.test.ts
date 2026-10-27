@@ -33,6 +33,36 @@ describe('suggest', () => {
   it('works off the shipped vocabulary by default', () => {
     expect(suggest('racc')).toEqual(['raccoon']);
   });
+
+  it.each([
+    ['girafe', 'giraffe'],
+    ['elefant', 'elephant'],
+    ['pengiun', 'penguin'],
+    ['squirel', 'squirrel'],
+    ['hipo', 'hippo'],
+    ['dolfin', 'dolphin'],
+    ['lepoard', 'leopard'],
+    ['chetah', 'cheetah'],
+  ])('forgives a typo: %s', (typo, animal) => {
+    expect(suggest(typo)[0]).toBe(animal);
+  });
+
+  it('offers the animal for a dropped letter, though a closer substring may outrank it', () => {
+    expect(suggest('racon')).toContain('raccoon');
+  });
+
+  it('does not pad a real prefix with lookalikes', () => {
+    expect(suggest('ot')).toEqual(['otter']);
+    expect(suggest('polar')).toEqual(['polar bear']);
+  });
+
+  it('offers nothing for nonsense', () => {
+    expect(suggest('xyz')).toEqual([]);
+  });
+
+  it('ranks a later word ahead of a fuzzy match', () => {
+    expect(suggest('lio')).toEqual(['lion', 'sea lion']);
+  });
 });
 
 describe('the shipped vocabulary', () => {
