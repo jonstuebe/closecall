@@ -4,3 +4,33 @@ puzzle,answer,file,source,origin,license,verified
 3,butterfly,f13c6d95411bd816.jpg,"OpenCV sample images",https://github.com/opencv/opencv/tree/master/samples/data,"BSD-licensed sample data",prototype
 4,mandrill,755cdfc3ea5c4862.jpg,"Standard test image (OpenCV samples)",https://github.com/opencv/opencv/tree/master/samples/data,"BSD-licensed sample data",prototype
 5,dog,f7a63fc5cb08477e.jpg,"PyTorch Hub sample image",https://github.com/pytorch/hub,"BSD-licensed sample data",prototype
+6,fox,2960a3fb1bc498cb.jpg,"Fox by Charles J. Sharp (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Red_fox_(Vulpes_vulpes_crucigera)_Skalnate_Pleso_2.jpg,"CC BY-SA 4.0",verified
+7,hedgehog,cdc4e7e82ae324ad.jpg,"Hedgehog by PetroKaterynych (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:%D0%87%D0%B6%D0%B0%D0%BA_%D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D0%B8%D0%B9_%D0%B1%D1%96%D0%BB%D1%8F_%D0%93%D0%BE%D0%BB%D0%BE%D1%81%D1%96%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BB%D1%96%D1%81%D1%83.jpg,"CC BY-SA 4.0",verified
+8,giraffe,35f123714f094f36.jpg,"Giraffe by Giles Laurent (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:042_Masai_giraffe_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg,"CC BY-SA 4.0",verified
+9,chameleon,b91ac4d3a81d580b.jpg,"Chameleon by Charles J. Sharp (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Panther_chameleon_(Furcifer_pardalis)_male_Montagne_d%E2%80%99Ambre_3.jpg,"CC BY-SA 4.0",verified
+10,owl,10256b3d760febb4.jpg,"Owl by Tisha Mukherjee (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Asian_Barn_Owl_in_Joka_June_2024_by_Tisha_Mukherjee_02.jpg,"CC BY-SA 4.0",verified
+11,elephant,a8e3bedb679897fc.jpg,"Elephant by Diego Delso (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Elefante_africano_de_sabana_(Loxodonta_africana),_parque_nacional_Kruger,_Sud%C3%A1frica,_2018-07-25,_DD_06.jpg,"CC BY-SA 4.0",verified
+12,ladybug,f2955c900ac3c29d.jpg,"Ladybug by Quartl (CC BY-SA 3.0)",https://commons.wikimedia.org/wiki/File:Coccinella_septempunctata_qtl1.jpg,"CC BY-SA 3.0",verified
+13,koala,8da87c7909c863cc.jpg,"Koala by Till Niermann (CC BY 3.0)",https://commons.wikimedia.org/wiki/File:Koala_in_Zoo_Duisburg.jpg,"CC BY 3.0",verified
+14,rhino,75b5994cb19a4fdc.jpg,"Rhino by Charles J. Sharp (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Indian_rhinoceros_(Rhinoceros_unicornis)_4.jpg,"CC BY-SA 4.0",verified
+15,toucan,a79e0a68b21e0a3a.jpg,"Toucan by Giles Laurent (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:006_Toco_toucan_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg,"CC BY-SA 4.0",verified
+16,meerkat,ad58246de4a45dbd.jpg,"Meerkat by Charles J. Sharp (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Meerkat_(Suricata_suricatta)_Tswalu.jpg,"CC BY-SA 4.0",verified
+17,lion,fc3768775d5d4ff3.jpg,"Lion by Giles Laurent (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:002_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg,"CC BY-SA 4.0",verified
+18,iguana,b1b5fd36c2a41810.jpg,"Iguana by Wilfredor (CC BY-SA 3.0)",https://commons.wikimedia.org/wiki/File:Iguana_in_the_Maracaibo_wild.jpg,"CC BY-SA 3.0",verified
+19,zebra,cdac427764cac7f6.jpg,"Zebra by William Crochot, Wikimedia Commons (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Equus_grevyi_(Z%C3%A8bre_de_Gr%C3%A9vy)_-_388.jpg,"CC BY-SA 4.0",verified
+20,cheetah,51134bdc4a272f5e.jpg,"Cheetah by Giles Laurent (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:037_Cheetah_close-up_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg,"CC BY-SA 4.0",verified
+21,frog,d137b8a5f572bc7b.jpg,"Frog by Chmee2 (CC BY 3.0)",https://commons.wikimedia.org/wiki/File:Rana_temporaria_in_nature_park_Trho%C5%88_in_2014_(2).jpg,"CC BY 3.0",verified
+22,camel,25afbcf735aa44b1.jpg,"Camel by Alexandr frolov (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Camel_Farm_in_Mongolia_02.jpg,"CC BY-SA 4.0",verified
+23,gorilla,5e9c9090759ce12f.jpg,"Gorilla by Charles J. Sharp (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Mountain_gorilla_(Gorilla_beringei_beringei)_female_eating_root.jpg,"CC BY-SA 4.0",verified
+24,dragonfly,e66e3ff319c73022.jpg,"Dragonfly by 26D (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B5%D1%86_%D1%81%D1%82%D1%80%D0%B5%D0%BA%D0%BE%D0%B7%D1%8B_%D1%80%D0%BE%D0%B4%D0%B0_Orthetrum_(%D0%BD%D0%B0%D1%81%D1%82%D0%BE%D1%8F%D1%89%D0%B8%D0%B5_%D1%81%D1%82%D1%80%D0%B5%D0%BA%D0%BE%D0%B7%D1%8B).jpg,"CC BY-SA 4.0",verified
+25,red panda,7f6e75ff332a1248.jpg,"Red panda by H. Zell (CC BY-SA 3.0)",https://commons.wikimedia.org/wiki/File:Ailurus_fulgens_-_Karlsruhe_Zoo_01.jpg,"CC BY-SA 3.0",verified
+26,crocodile,4b73c6b14e968414.jpg,"Crocodile by Tisha Mukherjee (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Saltwater_crocodile_in_Sundarbans_National_Park_September_2024_by_Tisha_Mukherjee_01.jpg,"CC BY-SA 4.0",verified
+27,bison,38d54352c465385f.jpg,"Bison by Charles J. Sharp (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:European_bison_(Bison_bonasus)_male_Bia%C5%82owieza.jpg,"CC BY-SA 4.0",verified
+28,peacock,32b1725067ef1bd5.jpg,"Peacock by Giles Laurent (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:023_Indian_peafowl_in_Jim_Corbett_National_Park_Photo_by_Giles_Laurent.jpg,"CC BY-SA 4.0",verified
+29,sloth,9b5d6996c00b7d73.jpg,"Sloth by Dave Pape (public domain)",https://commons.wikimedia.org/wiki/File:Choloepus_didactylus_2_-_Buffalo_Zoo.jpg,"Public domain",verified
+30,flamingo,8eb5e9e808e7b051.jpg,"Flamingo by Diego Delso (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Flamenco_com%C3%BAn_(Phoenicopterus_roseus),_Walvis_Bay,_Namibia,_2018-08-05,_DD_30.jpg,"CC BY-SA 4.0",verified
+31,hippo,b988c0de4154b850.jpg,"Hippo by Diego Delso (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Hipop%C3%B3tamo_(Hippopotamus_amphibius),_parque_nacional_de_Chobe,_Botsuana,_2018-07-28,_DD_82.jpg,"CC BY-SA 4.0",verified
+32,ostrich,a3dd799ca92310c5.jpg,"Ostrich by Gzen92 (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Autruche_d%27Afrique_(Struthio_camelus)_(2).jpg,"CC BY-SA 4.0",verified
+33,tiger,c8ec766ac1bd4872.jpg,"Tiger by Tuxyso (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:Amurtiger-Zoo-Duisburg-Bad-Wasserlinsen-2025-2.jpg,"CC BY-SA 4.0",verified
+34,leopard,6844d67d67d18ce9.jpg,"Leopard by Giles Laurent (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:001_Juvenile_leopard_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg,"CC BY-SA 4.0",verified
+35,pelican,7fdd10e71b315438.jpg,"Pelican by Frank Schulenburg (CC BY-SA 4.0)",https://commons.wikimedia.org/wiki/File:American_White_Pelican_(Las_Gallinas_Wildlife_Ponds).jpg,"CC BY-SA 4.0",verified

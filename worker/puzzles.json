@@ -3,50 +3,1030 @@
     "id": 1,
     "answer": "cat",
     "display": "a cat",
-    "accept": ["cat", "kitten", "kitty", "tabby", "house cat", "domestic cat", "tabby cat"],
-    "photo": { "file": "aad88ac752889eb1.jpg", "width": 451, "height": 300, "credit": "“Chelsea”, scikit-image sample data" },
-    "focus": { "x": 0.47, "y": 0.3 },
-    "zooms": [6, 4.5, 3.2, 2.2, 1.5, 1],
+    "accept": [
+      "cat",
+      "kitten",
+      "kitty",
+      "tabby",
+      "house cat",
+      "domestic cat",
+      "tabby cat"
+    ],
+    "photo": {
+      "file": "aad88ac752889eb1.jpg",
+      "width": 451,
+      "height": 300,
+      "credit": "“Chelsea”, scikit-image sample data"
+    },
+    "focus": {
+      "x": 0.47,
+      "y": 0.3
+    },
+    "zooms": [
+      6,
+      4.5,
+      3.2,
+      2.2,
+      1.5,
+      1
+    ],
     "fact": "A cat's nose print is as individual as a human fingerprint — no two are the same."
   },
   {
     "id": 2,
     "answer": "raccoon",
     "display": "a raccoon",
-    "accept": ["raccoon", "racoon", "trash panda", "coon"],
-    "photo": { "file": "fc33cddafbfa396b.jpg", "width": 1024, "height": 768, "credit": "Raccoon face, SciPy sample data" },
-    "focus": { "x": 0.52, "y": 0.3 },
-    "zooms": [10, 7, 4.5, 3, 1.8, 1],
+    "accept": [
+      "raccoon",
+      "racoon",
+      "trash panda",
+      "coon"
+    ],
+    "photo": {
+      "file": "fc33cddafbfa396b.jpg",
+      "width": 1024,
+      "height": 768,
+      "credit": "Raccoon face, SciPy sample data"
+    },
+    "focus": {
+      "x": 0.52,
+      "y": 0.3
+    },
+    "zooms": [
+      10,
+      7,
+      4.5,
+      3,
+      1.8,
+      1
+    ],
     "fact": "Raccoons have extraordinarily sensitive front paws, and often handle food in water before eating it."
   },
   {
     "id": 3,
     "answer": "butterfly",
     "display": "a butterfly",
-    "accept": ["butterfly", "swallowtail", "lime swallowtail", "lime butterfly", "swallowtail butterfly"],
-    "photo": { "file": "f13c6d95411bd816.jpg", "width": 493, "height": 356, "credit": "Lime swallowtail, OpenCV sample images" },
-    "focus": { "x": 0.68, "y": 0.3 },
-    "zooms": [6, 4.5, 3.2, 2.2, 1.5, 1],
+    "accept": [
+      "butterfly",
+      "swallowtail",
+      "lime swallowtail",
+      "lime butterfly",
+      "swallowtail butterfly"
+    ],
+    "photo": {
+      "file": "f13c6d95411bd816.jpg",
+      "width": 493,
+      "height": 356,
+      "credit": "Lime swallowtail, OpenCV sample images"
+    },
+    "focus": {
+      "x": 0.68,
+      "y": 0.3
+    },
+    "zooms": [
+      6,
+      4.5,
+      3.2,
+      2.2,
+      1.5,
+      1
+    ],
     "fact": "Butterflies taste with their feet — chemoreceptors on their legs tell them whether a leaf is worth laying eggs on."
   },
   {
     "id": 4,
     "answer": "mandrill",
     "display": "a mandrill",
-    "accept": ["mandrill", "baboon", "monkey", "mandrill monkey"],
-    "photo": { "file": "755cdfc3ea5c4862.jpg", "width": 512, "height": 512, "credit": "Mandrill, standard test image (OpenCV samples)" },
-    "focus": { "x": 0.5, "y": 0.55 },
-    "zooms": [7, 5, 3.5, 2.4, 1.6, 1],
+    "accept": [
+      "mandrill",
+      "baboon",
+      "monkey",
+      "mandrill monkey"
+    ],
+    "photo": {
+      "file": "755cdfc3ea5c4862.jpg",
+      "width": 512,
+      "height": 512,
+      "credit": "Mandrill, standard test image (OpenCV samples)"
+    },
+    "focus": {
+      "x": 0.5,
+      "y": 0.55
+    },
+    "zooms": [
+      7,
+      5,
+      3.5,
+      2.4,
+      1.6,
+      1
+    ],
     "fact": "Mandrills are the largest monkeys in the world, and the brightness of a male's face tracks his rank."
   },
   {
     "id": 5,
     "answer": "dog",
     "display": "a dog",
-    "accept": ["dog", "puppy", "pup", "samoyed", "spitz", "american eskimo", "american eskimo dog", "eskimo dog", "pomeranian", "doggo"],
-    "photo": { "file": "f7a63fc5cb08477e.jpg", "width": 1400, "height": 1098, "credit": "Samoyed, PyTorch Hub sample image" },
-    "focus": { "x": 0.29, "y": 0.36 },
-    "zooms": [10, 7, 4.5, 3, 1.8, 1],
+    "accept": [
+      "dog",
+      "puppy",
+      "pup",
+      "samoyed",
+      "spitz",
+      "american eskimo",
+      "american eskimo dog",
+      "eskimo dog",
+      "pomeranian",
+      "doggo"
+    ],
+    "photo": {
+      "file": "f7a63fc5cb08477e.jpg",
+      "width": 1400,
+      "height": 1098,
+      "credit": "Samoyed, PyTorch Hub sample image"
+    },
+    "focus": {
+      "x": 0.29,
+      "y": 0.36
+    },
+    "zooms": [
+      10,
+      7,
+      4.5,
+      3,
+      1.8,
+      1
+    ],
     "fact": "Samoyeds were bred by the Nenets people to herd reindeer — and to sleep piled on top of their humans for warmth."
+  },
+  {
+    "id": 6,
+    "answer": "fox",
+    "display": "a fox",
+    "accept": [
+      "fox",
+      "red fox"
+    ],
+    "photo": {
+      "file": "2960a3fb1bc498cb.jpg",
+      "width": 1600,
+      "height": 1066,
+      "credit": "Fox by Charles J. Sharp (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.46,
+      "y": 0.5
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Red foxes are the most widespread wild carnivore on Earth, found right across the Northern Hemisphere and in Australia."
+  },
+  {
+    "id": 7,
+    "answer": "hedgehog",
+    "display": "a hedgehog",
+    "accept": [
+      "hedgehog",
+      "european hedgehog",
+      "common hedgehog"
+    ],
+    "photo": {
+      "file": "cdc4e7e82ae324ad.jpg",
+      "width": 1600,
+      "height": 1200,
+      "credit": "Hedgehog by PetroKaterynych (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.66,
+      "y": 0.32
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "A hedgehog carries around 5,000 to 7,000 spines, and each one is a hollow, stiffened hair."
+  },
+  {
+    "id": 8,
+    "answer": "giraffe",
+    "display": "a giraffe",
+    "accept": [
+      "giraffe",
+      "masai giraffe"
+    ],
+    "photo": {
+      "file": "35f123714f094f36.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Giraffe by Giles Laurent (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.45,
+      "y": 0.52
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "A giraffe's tongue can be nearly half a metre long; its dark colour is thought to protect it from sunburn while it feeds."
+  },
+  {
+    "id": 9,
+    "answer": "chameleon",
+    "display": "a chameleon",
+    "accept": [
+      "chameleon",
+      "panther chameleon"
+    ],
+    "photo": {
+      "file": "b91ac4d3a81d580b.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Chameleon by Charles J. Sharp (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.745,
+      "y": 0.445
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "A chameleon's eyes swivel independently, so it can watch two directions at once before locking both on its prey."
+  },
+  {
+    "id": 10,
+    "answer": "owl",
+    "display": "an owl",
+    "accept": [
+      "owl",
+      "barn owl",
+      "asian barn owl",
+      "eastern barn owl"
+    ],
+    "photo": {
+      "file": "10256b3d760febb4.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Owl by Tisha Mukherjee (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.475,
+      "y": 0.565
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "A barn owl's heart-shaped face works like a satellite dish, funnelling sound to its ears so it can hunt in total darkness."
+  },
+  {
+    "id": 11,
+    "answer": "elephant",
+    "display": "an elephant",
+    "accept": [
+      "elephant",
+      "african elephant",
+      "african bush elephant",
+      "bush elephant",
+      "savanna elephant"
+    ],
+    "photo": {
+      "file": "a8e3bedb679897fc.jpg",
+      "width": 1600,
+      "height": 1101,
+      "credit": "Elephant by Diego Delso (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.63,
+      "y": 0.52
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Elephants use their huge ears as radiators: flapping them cools the blood running through the thin skin."
+  },
+  {
+    "id": 12,
+    "answer": "ladybug",
+    "display": "a ladybug",
+    "accept": [
+      "ladybug",
+      "ladybird",
+      "lady beetle",
+      "ladybird beetle",
+      "sevenspot ladybird",
+      "sevenspotted ladybug"
+    ],
+    "photo": {
+      "file": "f2955c900ac3c29d.jpg",
+      "width": 1600,
+      "height": 1483,
+      "credit": "Ladybug by Quartl (CC BY-SA 3.0)"
+    },
+    "focus": {
+      "x": 0.58,
+      "y": 0.57
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "A single ladybird can eat around 5,000 aphids in its lifetime, which is why gardeners love them."
+  },
+  {
+    "id": 13,
+    "answer": "koala",
+    "display": "a koala",
+    "accept": [
+      "koala",
+      "koala bear"
+    ],
+    "photo": {
+      "file": "8da87c7909c863cc.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Koala by Till Niermann (CC BY 3.0)"
+    },
+    "focus": {
+      "x": 0.62,
+      "y": 0.28
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Koalas sleep up to 20 hours a day: their eucalyptus diet is so low in energy that they have little to spare."
+  },
+  {
+    "id": 14,
+    "answer": "rhino",
+    "display": "a rhino",
+    "accept": [
+      "rhino",
+      "rhinoceros",
+      "indian rhino",
+      "indian rhinoceros",
+      "greater onehorned rhinoceros",
+      "onehorned rhino"
+    ],
+    "photo": {
+      "file": "75b5994cb19a4fdc.jpg",
+      "width": 1600,
+      "height": 1066,
+      "credit": "Rhino by Charles J. Sharp (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Despite its armour-plated look, the Indian rhino's single horn is made of keratin, the same stuff as your fingernails."
+  },
+  {
+    "id": 15,
+    "answer": "toucan",
+    "display": "a toucan",
+    "accept": [
+      "toucan",
+      "toco toucan"
+    ],
+    "photo": {
+      "file": "a79e0a68b21e0a3a.jpg",
+      "width": 1600,
+      "height": 1066,
+      "credit": "Toucan by Giles Laurent (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.62,
+      "y": 0.3
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "A toco toucan's enormous bill is light and mostly hollow, and it helps the bird shed heat on hot days."
+  },
+  {
+    "id": 16,
+    "answer": "meerkat",
+    "display": "a meerkat",
+    "accept": [
+      "meerkat",
+      "suricate"
+    ],
+    "photo": {
+      "file": "ad58246de4a45dbd.jpg",
+      "width": 1600,
+      "height": 1318,
+      "credit": "Meerkat by Charles J. Sharp (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.655,
+      "y": 0.71
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Meerkats take turns standing sentry, and they use different alarm calls for danger from the air and danger on the ground."
+  },
+  {
+    "id": 17,
+    "answer": "lion",
+    "display": "a lion",
+    "accept": [
+      "lion",
+      "african lion"
+    ],
+    "photo": {
+      "file": "fc3768775d5d4ff3.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Lion by Giles Laurent (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.63,
+      "y": 0.28
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "A lion's roar can be heard up to 8 kilometres (5 miles) away."
+  },
+  {
+    "id": 18,
+    "answer": "iguana",
+    "display": "an iguana",
+    "accept": [
+      "iguana",
+      "green iguana"
+    ],
+    "photo": {
+      "file": "b1b5fd36c2a41810.jpg",
+      "width": 1600,
+      "height": 1139,
+      "credit": "Iguana by Wilfredor (CC BY-SA 3.0)"
+    },
+    "focus": {
+      "x": 0.67,
+      "y": 0.47
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Green iguanas have a 'third eye' on top of their heads: the parietal eye can't see shapes, but it senses light and shadow from above."
+  },
+  {
+    "id": 19,
+    "answer": "zebra",
+    "display": "a zebra",
+    "accept": [
+      "zebra",
+      "grevys zebra",
+      "imperial zebra"
+    ],
+    "photo": {
+      "file": "cdac427764cac7f6.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Zebra by William Crochot, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.66,
+      "y": 0.68
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Grévy's zebra is the largest wild member of the horse family, and its stripes are narrower than any other zebra's."
+  },
+  {
+    "id": 20,
+    "answer": "cheetah",
+    "display": "a cheetah",
+    "accept": [
+      "cheetah"
+    ],
+    "photo": {
+      "file": "51134bdc4a272f5e.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Cheetah by Giles Laurent (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.44,
+      "y": 0.47
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "The black 'tear marks' running from a cheetah's eyes are thought to cut the sun's glare while it hunts."
+  },
+  {
+    "id": 21,
+    "answer": "frog",
+    "display": "a frog",
+    "accept": [
+      "frog",
+      "common frog",
+      "european common frog",
+      "grass frog"
+    ],
+    "photo": {
+      "file": "d137b8a5f572bc7b.jpg",
+      "width": 1600,
+      "height": 1074,
+      "credit": "Frog by Chmee2 (CC BY 3.0)"
+    },
+    "focus": {
+      "x": 0.52,
+      "y": 0.34
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Common frogs can spend the winter at the bottom of a pond, breathing through their skin."
+  },
+  {
+    "id": 22,
+    "answer": "camel",
+    "display": "a camel",
+    "accept": [
+      "camel",
+      "bactrian camel",
+      "twohumped camel"
+    ],
+    "photo": {
+      "file": "25afbcf735aa44b1.jpg",
+      "width": 1600,
+      "height": 1157,
+      "credit": "Camel by Alexandr frolov (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.5,
+      "y": 0.22
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "A camel's humps store fat, not water: they can shrink and flop over when the camel goes without food."
+  },
+  {
+    "id": 23,
+    "answer": "gorilla",
+    "display": "a gorilla",
+    "accept": [
+      "gorilla",
+      "mountain gorilla"
+    ],
+    "photo": {
+      "file": "5e9c9090759ce12f.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Gorilla by Charles J. Sharp (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.47,
+      "y": 0.45
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Researchers tell gorillas apart by their nose prints: the wrinkles above the nostrils are unique to each one."
+  },
+  {
+    "id": 24,
+    "answer": "dragonfly",
+    "display": "a dragonfly",
+    "accept": [
+      "dragonfly",
+      "skimmer"
+    ],
+    "photo": {
+      "file": "e66e3ff319c73022.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Dragonfly by 26D (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.58,
+      "y": 0.6
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Dragonflies catch around 95% of the prey they chase, making them among the most successful hunters on Earth."
+  },
+  {
+    "id": 25,
+    "answer": "red panda",
+    "display": "a red panda",
+    "accept": [
+      "red panda",
+      "lesser panda",
+      "firefox"
+    ],
+    "photo": {
+      "file": "7f6e75ff332a1248.jpg",
+      "width": 1600,
+      "height": 1304,
+      "credit": "Red panda by H. Zell (CC BY-SA 3.0)"
+    },
+    "focus": {
+      "x": 0.55,
+      "y": 0.5
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Red pandas aren't close relatives of giant pandas: they're the only living member of their own family, Ailuridae."
+  },
+  {
+    "id": 26,
+    "answer": "crocodile",
+    "display": "a crocodile",
+    "accept": [
+      "crocodile",
+      "croc",
+      "saltwater crocodile",
+      "saltie",
+      "estuarine crocodile"
+    ],
+    "photo": {
+      "file": "4b73c6b14e968414.jpg",
+      "width": 1600,
+      "height": 1066,
+      "credit": "Crocodile by Tisha Mukherjee (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.525,
+      "y": 0.47
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Saltwater crocodiles are the largest living reptiles; big males can grow to more than 6 metres long."
+  },
+  {
+    "id": 27,
+    "answer": "bison",
+    "display": "a bison",
+    "accept": [
+      "bison",
+      "european bison",
+      "wisent",
+      "buffalo"
+    ],
+    "photo": {
+      "file": "38d54352c465385f.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Bison by Charles J. Sharp (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.74,
+      "y": 0.5
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "European bison were wiped out in the wild by 1927; every one alive today descends from just 12 animals kept in zoos."
+  },
+  {
+    "id": 28,
+    "answer": "peacock",
+    "display": "a peacock",
+    "accept": [
+      "peacock",
+      "peafowl",
+      "indian peafowl",
+      "indian peacock",
+      "blue peafowl"
+    ],
+    "photo": {
+      "file": "32b1725067ef1bd5.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Peacock by Giles Laurent (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.45,
+      "y": 0.3
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Only the male is a peacock: females are peahens, and together they're peafowl."
+  },
+  {
+    "id": 29,
+    "answer": "sloth",
+    "display": "a sloth",
+    "accept": [
+      "sloth",
+      "twotoed sloth",
+      "linnaeuss twotoed sloth"
+    ],
+    "photo": {
+      "file": "9b5d6996c00b7d73.jpg",
+      "width": 1600,
+      "height": 1376,
+      "credit": "Sloth by Dave Pape (public domain)"
+    },
+    "focus": {
+      "x": 0.6,
+      "y": 0.33
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "A sloth can take a month to digest a single meal of leaves."
+  },
+  {
+    "id": 30,
+    "answer": "flamingo",
+    "display": "a flamingo",
+    "accept": [
+      "flamingo",
+      "greater flamingo",
+      "pink flamingo"
+    ],
+    "photo": {
+      "file": "8eb5e9e808e7b051.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Flamingo by Diego Delso (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.35,
+      "y": 0.5
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Flamingos hatch grey; their pink comes from pigments in the algae and tiny shrimp they eat."
+  },
+  {
+    "id": 31,
+    "answer": "hippo",
+    "display": "a hippo",
+    "accept": [
+      "hippo",
+      "hippopotamus",
+      "river horse"
+    ],
+    "photo": {
+      "file": "b988c0de4154b850.jpg",
+      "width": 1600,
+      "height": 974,
+      "credit": "Hippo by Diego Delso (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.8,
+      "y": 0.6
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Hippos ooze a reddish oil that works as sunscreen and moisturiser; it's often called 'blood sweat', though it's neither."
+  },
+  {
+    "id": 32,
+    "answer": "ostrich",
+    "display": "an ostrich",
+    "accept": [
+      "ostrich",
+      "common ostrich"
+    ],
+    "photo": {
+      "file": "a3dd799ca92310c5.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Ostrich by Gzen92 (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.3,
+      "y": 0.3
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "An ostrich's eye is bigger than its brain."
+  },
+  {
+    "id": 33,
+    "answer": "tiger",
+    "display": "a tiger",
+    "accept": [
+      "tiger",
+      "amur tiger",
+      "siberian tiger"
+    ],
+    "photo": {
+      "file": "c8ec766ac1bd4872.jpg",
+      "width": 1600,
+      "height": 1140,
+      "credit": "Tiger by Tuxyso (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.75,
+      "y": 0.35
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "No two tigers have the same stripes, and the stripes aren't only in the fur: they're on the skin underneath too."
+  },
+  {
+    "id": 34,
+    "answer": "leopard",
+    "display": "a leopard",
+    "accept": [
+      "leopard"
+    ],
+    "photo": {
+      "file": "6844d67d67d18ce9.jpg",
+      "width": 1600,
+      "height": 1068,
+      "credit": "Leopard by Giles Laurent (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.48,
+      "y": 0.62
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "Leopards can haul prey heavier than themselves up into trees, out of reach of lions and hyenas."
+  },
+  {
+    "id": 35,
+    "answer": "pelican",
+    "display": "a pelican",
+    "accept": [
+      "pelican",
+      "american white pelican",
+      "white pelican"
+    ],
+    "photo": {
+      "file": "7fdd10e71b315438.jpg",
+      "width": 1600,
+      "height": 1067,
+      "credit": "Pelican by Frank Schulenburg (CC BY-SA 4.0)"
+    },
+    "focus": {
+      "x": 0.32,
+      "y": 0.27
+    },
+    "zooms": [
+      8,
+      5.5,
+      3.8,
+      2.6,
+      1.7,
+      1
+    ],
+    "fact": "American white pelicans don't dive for fish: they work as a team to herd them into the shallows, then scoop them up."
   }
 ]
