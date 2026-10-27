@@ -53,72 +53,80 @@ export function GuessForm({ onGuess, onSkip, tried, disabled }: GuessFormProps) 
 
   return (
     <section className="play">
-      <form
-        key={shake}
-        className={shake ? 'guess-row shake' : 'guess-row'}
-        autoComplete="off"
-        onSubmit={(e) => {
-          e.preventDefault();
-          submit();
-        }}
-      >
-        <label className="sr-only" htmlFor="guess">
-          Your guess
-        </label>
-        <div className="combobox">
-          <input
-            id="guess"
-            ref={inputRef}
-            role="combobox"
-            aria-autocomplete="list"
-            aria-expanded={open}
-            aria-controls="guess-suggestions"
-            aria-activedescendant={active >= 0 ? `suggestion-${active}` : undefined}
-            placeholder="Which animal is it?"
-            autoCapitalize="off"
-            spellCheck={false}
-            enterKeyHint="go"
-            disabled={disabled}
-            value={value}
-            onChange={(e) => change(e.target.value)}
-            onBlur={() => window.setTimeout(close, 120)}
-            onKeyDown={(e) => {
-              if (!open) return;
-              if (e.key === 'ArrowDown') {
-                e.preventDefault();
-                setActive((a) => (a + 1) % items.length);
-              } else if (e.key === 'ArrowUp') {
-                e.preventDefault();
-                setActive((a) => (a <= 0 ? items.length - 1 : a - 1));
-              } else if (e.key === 'Enter' && active >= 0) {
-                e.preventDefault();
-                pick(active);
-              } else if (e.key === 'Escape') {
-                close();
-              }
-            }}
-          />
-          <ul className="suggestions" id="guess-suggestions" role="listbox" aria-label="Suggestions" hidden={!open}>
-            {items.map((item, i) => (
-              <li
-                key={item}
-                id={`suggestion-${i}`}
-                role="option"
-                aria-selected={i === active}
-                onPointerDown={(e) => {
+      <div className="guess-box">
+        <form
+          key={shake}
+          className={shake ? 'guess-row shake' : 'guess-row'}
+          autoComplete="off"
+          onSubmit={(e) => {
+            e.preventDefault();
+            submit();
+          }}
+        >
+          <label className="sr-only" htmlFor="guess">
+            Your guess
+          </label>
+          <div className="combobox">
+            <input
+              id="guess"
+              ref={inputRef}
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded={open}
+              aria-controls="guess-suggestions"
+              aria-activedescendant={active >= 0 ? `suggestion-${active}` : undefined}
+              placeholder="Which animal is it?"
+              autoCapitalize="off"
+              spellCheck={false}
+              enterKeyHint="go"
+              disabled={disabled}
+              value={value}
+              onChange={(e) => change(e.target.value)}
+              onBlur={() => window.setTimeout(close, 120)}
+              onKeyDown={(e) => {
+                if (!open) return;
+                if (e.key === 'ArrowDown') {
                   e.preventDefault();
-                  pick(i);
-                }}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <button className="button button-primary" type="submit" disabled={disabled}>
-          Guess
-        </button>
-      </form>
+                  setActive((a) => (a + 1) % items.length);
+                } else if (e.key === 'ArrowUp') {
+                  e.preventDefault();
+                  setActive((a) => (a <= 0 ? items.length - 1 : a - 1));
+                } else if (e.key === 'Enter' && active >= 0) {
+                  e.preventDefault();
+                  pick(active);
+                } else if (e.key === 'Escape') {
+                  close();
+                }
+              }}
+            />
+          </div>
+          <button
+            className="button button-primary"
+            type="submit"
+            disabled={disabled}
+            // Keep focus (and the keyboard) in the field, so the layout doesn't shift under the tap.
+            onPointerDown={(e) => e.preventDefault()}
+          >
+            Guess
+          </button>
+        </form>
+        <ul className="suggestions" id="guess-suggestions" role="listbox" aria-label="Suggestions" hidden={!open}>
+          {items.map((item, i) => (
+            <li
+              key={item}
+              id={`suggestion-${i}`}
+              role="option"
+              aria-selected={i === active}
+              onPointerDown={(e) => {
+                e.preventDefault();
+                pick(i);
+              }}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
       <p className="hint" role="status">
         {hint}
       </p>

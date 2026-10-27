@@ -1,3 +1,5 @@
+import type { TryResult } from '../lib/types';
+
 const stroke = {
   fill: 'none',
   stroke: 'currentColor',
@@ -6,12 +8,23 @@ const stroke = {
   strokeLinejoin: 'round' as const,
 };
 
-/** The magnifier that gives the game its name. */
+/** Viewfinder corners around a focus point. */
 export function LogoMark() {
   return (
-    <svg className="logo-mark" viewBox="0 0 24 24" aria-hidden="true" {...stroke} strokeWidth={2.4}>
-      <circle cx="10.5" cy="10.5" r="6.5" />
-      <path d="M15.5 15.5 21 21" />
+    <svg className="logo-mark" viewBox="0 0 24 24" aria-hidden="true" {...stroke} strokeWidth={2.4} strokeLinecap="square">
+      <path d="M3 8.5V3h5.5M15.5 3H21v5.5M21 15.5V21h-5.5M8.5 21H3v-5.5" />
+      <circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+/** A Try's outcome by shape as well as colour: dot for a hit, cross for a miss, dash for a zoom-out. */
+export function ResultMark({ result }: { result: TryResult }) {
+  return (
+    <svg className={`mark mark-${result}`} viewBox="0 0 12 12" aria-hidden="true" {...stroke} strokeWidth={2.2}>
+      {result === 'hit' ? <circle cx="6" cy="6" r="4.6" fill="currentColor" stroke="none" /> : null}
+      {result === 'miss' ? <path d="M2.6 2.6l6.8 6.8M9.4 2.6 2.6 9.4" /> : null}
+      {result === 'skip' ? <path d="M2 6h8" /> : null}
     </svg>
   );
 }

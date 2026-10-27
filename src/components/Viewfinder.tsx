@@ -26,29 +26,39 @@ export function Viewfinder({ puzzle, zoom, revealed, reducedMotion }: Viewfinder
   }, []);
 
   const placement = frame(size, puzzle.photo, puzzle.focus, zoom);
+  // When the frame itself is resizing (the keyboard opening), the photo follows it exactly;
+  // only a change of zoom gets the slow pull-back.
+  const lastSize = useRef(size);
+  const resizing = lastSize.current !== size;
+  useEffect(() => {
+    lastSize.current = size;
+  });
 
   return (
-    <div className={`viewfinder ${revealed ? 'is-revealed' : ''}`} ref={ref}>
-      {size > 0 ? (
-        <img
-          className={reducedMotion ? 'viewfinder-photo no-motion' : 'viewfinder-photo'}
-          src={photoUrl(puzzle)}
-          alt={revealed ? `A photo of ${puzzle.display}` : 'A zoomed-in photo of a mystery animal'}
-          draggable={false}
-          style={{
-            width: `${placement.width}px`,
-            height: `${placement.height}px`,
-            transform: `translate(${placement.x}px, ${placement.y}px) scale(${placement.scale})`,
-          }}
-        />
-      ) : null}
-      <span className="corner corner-tl" />
-      <span className="corner corner-tr" />
-      <span className="corner corner-bl" />
-      <span className="corner corner-br" />
-      <span className="readout" aria-hidden="true">
-        {formatZoom(zoom)}
-      </span>
+    <div className="camera-lens">
+      <div className={`viewfinder ${revealed ? 'is-revealed' : ''}`} ref={ref}>
+        {size > 0 ? (
+          <img
+            className={reducedMotion || resizing ? 'viewfinder-photo no-motion' : 'viewfinder-photo'}
+            src={photoUrl(puzzle)}
+            alt={revealed ? `A photo of ${puzzle.display}` : 'A zoomed-in photo of a mystery animal'}
+            draggable={false}
+            style={{
+              width: `${placement.width}px`,
+              height: `${placement.height}px`,
+              transform: `translate(${placement.x}px, ${placement.y}px) scale(${placement.scale})`,
+            }}
+          />
+        ) : null}
+        <span className="reticle" />
+        <span className="corner corner-tl" />
+        <span className="corner corner-tr" />
+        <span className="corner corner-bl" />
+        <span className="corner corner-br" />
+        <span className="readout" aria-hidden="true">
+          {formatZoom(zoom)}
+        </span>
+      </div>
     </div>
   );
 }

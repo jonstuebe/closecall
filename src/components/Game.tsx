@@ -8,10 +8,13 @@ import { ZoomScale } from './ZoomScale';
 import { GuessForm } from './GuessForm';
 import { GuessList } from './GuessList';
 import { Result } from './Result';
+import { Camera } from './Camera';
 
 interface GameProps {
   puzzle: Puzzle;
   puzzleNumber: number;
+  /** Today's date as shown on the camera strip. */
+  date: string;
   record: PuzzleRecord;
   onRecord: (record: PuzzleRecord) => void;
   onAnnounce: (message: string) => void;
@@ -20,7 +23,7 @@ interface GameProps {
   reducedMotion: boolean;
 }
 
-export function Game({ puzzle, puzzleNumber, record, onRecord, onAnnounce, onToast, onExpire, reducedMotion }: GameProps) {
+export function Game({ puzzle, puzzleNumber, date, record, onRecord, onAnnounce, onToast, onExpire, reducedMotion }: GameProps) {
   const playing = record.status === 'playing';
   const won = record.status === 'won';
   const results = tryResults(record.guesses, won);
@@ -61,10 +64,18 @@ export function Game({ puzzle, puzzleNumber, record, onRecord, onAnnounce, onToa
     if (playing) spend(null);
   }, [playing, spend]);
 
+  const status = playing
+    ? `Try ${record.guesses.length + 1} of ${MAX_TRIES}`
+    : won
+      ? `Got it on ${record.guesses.length}`
+      : 'Out of tries';
+
   return (
     <>
-      <Viewfinder puzzle={puzzle} zoom={zoom} revealed={!playing} reducedMotion={reducedMotion} />
-      <ZoomScale zooms={puzzle.zooms} results={results} currentTry={playing ? record.guesses.length : null} />
+      <Camera number={puzzleNumber} date={date} status={status}>
+        <Viewfinder puzzle={puzzle} zoom={zoom} revealed={!playing} reducedMotion={reducedMotion} />
+        <ZoomScale zooms={puzzle.zooms} results={results} currentTry={playing ? record.guesses.length : null} />
+      </Camera>
       {playing ? (
         <GuessForm onGuess={guess} onSkip={skip} tried={record.guesses} disabled={false} />
       ) : (
@@ -78,7 +89,7 @@ export function Game({ puzzle, puzzleNumber, record, onRecord, onAnnounce, onToa
           onToast={onToast}
         />
       )}
-      <GuessList guesses={record.guesses} results={results} />
+      <GuessList guesses={record.guesses} results={results} zooms={puzzle.zooms} />
     </>
   );
 }

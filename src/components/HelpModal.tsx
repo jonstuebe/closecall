@@ -1,4 +1,5 @@
 import { MAX_TRIES } from '../lib/guessing';
+import { ResultMark } from './Icons';
 import { Modal } from './Modal';
 
 export function HelpModal({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -12,15 +13,15 @@ export function HelpModal({ open, onClose }: { open: boolean; onClose: () => voi
       </ul>
       <div className="key">
         <span>
-          <i className="swatch swatch-hit" aria-hidden="true" />
+          <ResultMark result="hit" />
           Got it
         </span>
         <span>
-          <i className="swatch swatch-miss" aria-hidden="true" />
+          <ResultMark result="miss" />
           Wrong guess
         </span>
         <span>
-          <i className="swatch swatch-skip" aria-hidden="true" />
+          <ResultMark result="skip" />
           Zoomed out
         </span>
       </div>

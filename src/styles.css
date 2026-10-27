@@ -1,71 +1,96 @@
 /* ---------- tokens ---------- */
 :root {
-  --bg: #e7ecef;
-  --surface: #f7f9fa;
-  --ink: #17232e;
-  --muted: #5a6873;
-  --line: #c9d3da;
-  --lens: #d9950f;
-  --hit: #267549;
-  --miss: #a8422f;
-  --skip: #9aa7b1;
-  --on-accent: #ffffff;
-  --shadow: 0 10px 28px rgb(0 0 0 / 22%);
+  --bg: oklch(0.958 0.005 250);
+  --surface: oklch(0.992 0.002 250);
+  --ink: oklch(0.235 0.018 250);
+  --muted: oklch(0.48 0.018 250);
+  --line: oklch(0.875 0.008 250);
+  --lens: oklch(0.74 0.155 72);
+  --hit: oklch(0.52 0.12 152);
+  --miss: oklch(0.53 0.15 33);
+  --skip: oklch(0.66 0.012 250);
+  --shadow: 0 14px 36px oklch(0.2 0.02 250 / 18%);
+
+  /* The camera body is dark in every theme, like a real viewfinder surround. */
+  --body: oklch(0.205 0.01 250);
+  --body-edge: oklch(0.29 0.01 250);
+  --body-ink: oklch(0.94 0.006 250);
+  --body-muted: oklch(0.7 0.012 250);
+  --body-line: oklch(0.42 0.012 250);
+  --body-lens: oklch(0.81 0.15 75);
+  --body-hit: oklch(0.74 0.14 152);
+  --body-miss: oklch(0.71 0.15 33);
+  --body-skip: oklch(0.62 0.012 250);
+
+  --font-ui: 'Bricolage Grotesque Variable', ui-rounded, 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Martian Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  /* The camera pulling back: the photo and the lens index move on this together. */
+  --ease-lens: cubic-bezier(0.16, 1, 0.3, 1);
+  --lens-time: 0.75s;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --bg: #10161b;
-    --surface: #1a232b;
-    --ink: #e4ebf0;
-    --muted: #94a3ae;
-    --line: #2c3a45;
-    --lens: #f2b33a;
-    --hit: #47b07a;
-    --miss: #e06d56;
-    --skip: #5e6e7a;
-    --on-accent: #0e1418;
+    --bg: oklch(0.16 0.008 250);
+    --surface: oklch(0.215 0.01 250);
+    --ink: oklch(0.935 0.006 250);
+    --muted: oklch(0.71 0.014 250);
+    --line: oklch(0.31 0.012 250);
+    --lens: oklch(0.81 0.15 75);
+    --hit: oklch(0.74 0.14 152);
+    --miss: oklch(0.71 0.15 33);
+    --skip: oklch(0.52 0.012 250);
+    --shadow: 0 14px 36px oklch(0 0 0 / 45%);
+    --body: oklch(0.2 0.01 250);
+    --body-edge: oklch(0.32 0.012 250);
     color-scheme: dark;
   }
 }
 
 :root[data-theme='dark'] {
-  --bg: #10161b;
-  --surface: #1a232b;
-  --ink: #e4ebf0;
-  --muted: #94a3ae;
-  --line: #2c3a45;
-  --lens: #f2b33a;
-  --hit: #47b07a;
-  --miss: #e06d56;
-  --skip: #5e6e7a;
-  --on-accent: #0e1418;
+  --bg: oklch(0.16 0.008 250);
+  --surface: oklch(0.215 0.01 250);
+  --ink: oklch(0.935 0.006 250);
+  --muted: oklch(0.71 0.014 250);
+  --line: oklch(0.31 0.012 250);
+  --lens: oklch(0.81 0.15 75);
+  --hit: oklch(0.74 0.14 152);
+  --miss: oklch(0.71 0.15 33);
+  --skip: oklch(0.52 0.012 250);
+  --shadow: 0 14px 36px oklch(0 0 0 / 45%);
+  --body: oklch(0.2 0.01 250);
+  --body-edge: oklch(0.32 0.012 250);
   color-scheme: dark;
 }
 
 /* Bolder, further-apart result colours for players who need them. */
 :root[data-contrast='high'] {
-  --hit: #117a45;
-  --miss: #a32d14;
-  --skip: #44525c;
-  --line: #8b99a4;
+  --hit: oklch(0.45 0.14 152);
+  --miss: oklch(0.47 0.18 30);
+  --skip: oklch(0.42 0.015 250);
+  --line: oklch(0.66 0.01 250);
+  --body-hit: oklch(0.83 0.17 152);
+  --body-miss: oklch(0.77 0.17 30);
+  --body-skip: oklch(0.74 0.01 250);
+  --body-line: oklch(0.56 0.012 250);
 }
 
 @media (prefers-color-scheme: dark) {
   :root[data-contrast='high']:not([data-theme='light']) {
-    --hit: #5fd79a;
-    --miss: #ff8d75;
-    --skip: #8898a4;
-    --line: #4a5c69;
+    --hit: oklch(0.83 0.17 152);
+    --miss: oklch(0.77 0.17 30);
+    --skip: oklch(0.7 0.012 250);
+    --line: oklch(0.47 0.012 250);
   }
 }
 
 :root[data-contrast='high'][data-theme='dark'] {
-  --hit: #5fd79a;
-  --miss: #ff8d75;
-  --skip: #8898a4;
-  --line: #4a5c69;
+  --hit: oklch(0.83 0.17 152);
+  --miss: oklch(0.77 0.17 30);
+  --skip: oklch(0.7 0.012 250);
+  --line: oklch(0.47 0.012 250);
 }
 
 *,
@@ -83,7 +108,7 @@ body {
   min-height: 100%;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Bricolage Grotesque Variable', ui-rounded, 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-ui);
   font-size: 17px;
   line-height: 1.45;
   -webkit-font-smoothing: antialiased;
@@ -96,6 +121,11 @@ input,
 textarea {
   font: inherit;
   color: inherit;
+}
+
+h2,
+h3 {
+  text-wrap: balance;
 }
 
 :focus-visible {
@@ -114,9 +144,9 @@ textarea {
 
 /* ---------- shell ---------- */
 .app {
-  max-width: 460px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 12px 16px 32px;
+  padding: 10px 16px 40px;
 }
 
 .header {
@@ -124,65 +154,111 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  padding: 4px 0 14px;
+  padding: 2px 0 12px;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   line-height: 1;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
 }
 
 .logo-mark {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   color: var(--lens);
 }
 
 .header-side {
   display: flex;
   gap: 2px;
+  margin-right: -8px;
 }
 
 .icon-button {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  border: 1.5px solid transparent;
+  border-radius: 12px;
+  border: 0;
   background: transparent;
   cursor: pointer;
   display: grid;
   place-items: center;
   color: var(--muted);
+  transition:
+    color 0.15s,
+    background-color 0.15s;
 }
 
 .icon-button:hover {
   color: var(--ink);
-  border-color: var(--line);
+  background: color-mix(in oklch, var(--ink) 7%, transparent);
+}
+
+.icon-button:active {
+  background: color-mix(in oklch, var(--ink) 12%, transparent);
 }
 
 .icon-button svg {
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
 }
 
-.meta {
+/* ---------- camera body ---------- */
+.camera {
+  /* Inside the body, results and the lens read against graphite, whatever the theme. */
+  --hit: var(--body-hit);
+  --miss: var(--body-miss);
+  --skip: var(--body-skip);
+  --lens: var(--body-lens);
+  background: var(--body);
+  color: var(--body-ink);
+  border: 1px solid var(--body-edge);
+  border-radius: 22px;
+  padding: 0 10px 12px;
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 7%),
+    0 1px 2px oklch(0.2 0.02 250 / 12%);
+}
+
+@media (max-width: 479px) {
+  .camera {
+    margin-inline: -6px;
+  }
+}
+
+.camera-strip {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  color: var(--muted);
-  font-size: 15px;
-  margin-bottom: 8px;
+  gap: 12px;
+  padding: 11px 6px 10px;
+  color: var(--body-muted);
+  font-size: 14px;
+  white-space: nowrap;
 }
 
-.meta strong {
-  color: var(--ink);
+.camera-number,
+.camera-status {
+  font-family: var(--font-mono);
+  font-size: 12px;
   font-weight: 600;
+  color: var(--body-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.camera-number {
+  margin-right: 10px;
+}
+
+.camera-date {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ---------- viewfinder ---------- */
@@ -191,7 +267,7 @@ textarea {
   aspect-ratio: 1;
   width: 100%;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 13px;
   background: #000;
   touch-action: manipulation;
 }
@@ -202,7 +278,7 @@ textarea {
   top: 0;
   transform-origin: 0 0;
   will-change: transform;
-  transition: transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: transform var(--lens-time) var(--ease-lens);
   user-select: none;
   -webkit-user-drag: none;
 }
@@ -212,8 +288,8 @@ textarea {
 }
 
 .viewfinder.is-loading {
-  background: linear-gradient(100deg, var(--surface) 30%, var(--line) 50%, var(--surface) 70%) 0 0 / 300% 100%;
-  animation: sweep 1.4s linear infinite;
+  background: linear-gradient(100deg, oklch(0.16 0.01 250) 30%, oklch(0.25 0.012 250) 50%, oklch(0.16 0.01 250) 70%) 0 0 / 300% 100%;
+  animation: sweep 1.6s linear infinite;
 }
 
 @keyframes sweep {
@@ -222,13 +298,40 @@ textarea {
   }
 }
 
+.viewfinder.is-empty {
+  display: grid;
+  place-items: center;
+  background: oklch(0.15 0.01 250);
+}
+
+.viewfinder-message {
+  text-align: center;
+  padding: 24px;
+  max-width: 32ch;
+}
+
+.viewfinder-message h2 {
+  font-size: 26px;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+
+.viewfinder-message p {
+  color: var(--body-muted);
+  margin: 0 0 18px;
+  text-wrap: pretty;
+}
+
 .corner {
   position: absolute;
-  width: 28px;
-  height: 28px;
-  border: 3px solid var(--lens);
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--lens);
   pointer-events: none;
-  transition: opacity 0.4s;
+  transition:
+    opacity 0.45s var(--ease-out),
+    translate 0.6s var(--ease-out);
 }
 
 .corner-tl {
@@ -236,6 +339,7 @@ textarea {
   left: 12px;
   border-right: 0;
   border-bottom: 0;
+  border-top-left-radius: 3px;
 }
 
 .corner-tr {
@@ -243,6 +347,7 @@ textarea {
   right: 12px;
   border-left: 0;
   border-bottom: 0;
+  border-top-right-radius: 3px;
 }
 
 .corner-bl {
@@ -250,6 +355,7 @@ textarea {
   left: 12px;
   border-right: 0;
   border-top: 0;
+  border-bottom-left-radius: 3px;
 }
 
 .corner-br {
@@ -257,77 +363,181 @@ textarea {
   right: 12px;
   border-left: 0;
   border-top: 0;
+  border-bottom-right-radius: 3px;
+}
+
+/* A faint focus circle: where the lens is pinned as it pulls back. */
+.reticle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border-radius: 50%;
+  border: 1.5px solid oklch(1 0 0 / 50%);
+  background: radial-gradient(circle, oklch(1 0 0 / 75%) 0 1.5px, transparent 2px);
+  box-shadow:
+    0 0 0 1px oklch(0 0 0 / 14%),
+    inset 0 0 0 1px oklch(0 0 0 / 14%);
+  pointer-events: none;
+  transition: opacity 0.45s var(--ease-out);
 }
 
 .readout {
   position: absolute;
-  right: 36px;
-  bottom: 36px;
-  background: rgb(10 14 18 / 72%);
-  color: #f2b33a;
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -0.02em;
-  padding: 2px 10px;
-  border-radius: 4px;
+  left: 50%;
+  bottom: 13px;
+  translate: -50% 0;
+  background: oklch(0.12 0.01 250 / 62%);
+  color: var(--lens);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  padding: 6px 9px;
+  border-radius: 7px;
   font-variant-numeric: tabular-nums;
-  transition: opacity 0.4s;
+  transition: opacity 0.45s var(--ease-out);
 }
 
-.viewfinder.is-revealed .corner,
-.viewfinder.is-revealed .readout {
+/* The reveal: the frame marks let go and drift out to the edges. */
+.viewfinder.is-revealed :is(.corner, .reticle, .readout) {
   opacity: 0;
 }
 
-/* ---------- zoom scale ---------- */
-.scale {
-  margin: 12px 0 4px;
+.viewfinder.is-revealed .corner-tl {
+  translate: -8px -8px;
 }
 
-.scale-ticks,
+.viewfinder.is-revealed .corner-tr {
+  translate: 8px -8px;
+}
+
+.viewfinder.is-revealed .corner-bl {
+  translate: -8px 8px;
+}
+
+.viewfinder.is-revealed .corner-br {
+  translate: 8px 8px;
+}
+
+/* ---------- lens scale ---------- */
+.scale {
+  padding: 12px 2px 0;
+}
+
+.scale-marks {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 13px;
+  place-items: center;
+}
+
+.scale-index {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% / 6);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform: translateX(calc(var(--at) * 100%));
+  transition: transform var(--lens-time) var(--ease-lens);
+}
+
+.scale-index::after {
+  content: '';
+  border-inline: 5px solid transparent;
+  border-top: 7px solid var(--lens);
+}
+
+.scale-rule {
+  display: block;
+  width: 100%;
+  height: 10px;
+  margin-top: 4px;
+  overflow: visible;
+}
+
+.scale-rule path {
+  stroke: var(--body-line);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+  fill: none;
+}
+
+.scale-rule .scale-major {
+  stroke: var(--body-muted);
+  stroke-width: 1.5px;
+}
+
 .scale-labels {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 6px;
-}
-
-.tick {
-  height: 8px;
-  border-radius: 2px;
-  background: var(--line);
-}
-
-.tick-current {
-  background: var(--lens);
-}
-
-.tick-miss {
-  background: var(--miss);
-}
-
-.tick-skip {
-  background: var(--skip);
-}
-
-.tick-hit {
-  background: var(--hit);
-}
-
-.scale-labels {
-  font-size: 13px;
-  color: var(--muted);
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1;
+  color: var(--body-muted);
   text-align: center;
   font-variant-numeric: tabular-nums;
+  transition: color 0.2s;
+}
+
+.scale-labels .is-current {
+  color: var(--lens);
+  font-weight: 700;
+}
+
+/* ---------- result marks ---------- */
+.mark {
+  width: 11px;
+  height: 11px;
+  flex: none;
+}
+
+.mark-hit {
+  color: var(--hit);
+}
+
+.mark-miss {
+  color: var(--miss);
+}
+
+.mark-skip {
+  color: var(--skip);
+}
+
+.scale-marks .mark {
+  animation: mark-in 0.22s var(--ease-out) both;
+}
+
+@keyframes mark-in {
+  from {
+    scale: 0.3;
+  }
 }
 
 /* ---------- play ---------- */
 .play {
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .guess-row {
   display: flex;
-  gap: 8px;
+  gap: 6px;
+  padding: 5px;
+  border: 1.5px solid var(--line);
+  border-radius: 15px;
+  background: var(--surface);
+  transition: border-color 0.15s;
+}
+
+.guess-row:focus-within {
+  border-color: var(--ink);
 }
 
 .combobox {
@@ -338,23 +548,25 @@ textarea {
 
 .combobox input {
   width: 100%;
-  height: 52px;
-  padding: 0 14px;
-  border-radius: 6px;
-  border: 1.5px solid var(--line);
-  background: var(--surface);
+  height: 46px;
+  padding: 0 10px;
+  border: 0;
+  background: transparent;
   font-size: 18px;
 }
 
 .combobox input:focus {
-  border-color: var(--lens);
   outline: none;
 }
 
+.combobox input::placeholder {
+  color: var(--muted);
+}
+
 .button {
-  height: 52px;
+  height: 46px;
   padding: 0 20px;
-  border-radius: 6px;
+  border-radius: 10px;
   border: 0;
   font-weight: 600;
   cursor: pointer;
@@ -362,6 +574,21 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  transition:
+    background-color 0.15s,
+    color 0.15s,
+    border-color 0.15s,
+    scale 0.15s var(--ease-out);
+}
+
+.button:active {
+  scale: 0.98;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  scale: none;
 }
 
 .button svg {
@@ -374,37 +601,51 @@ textarea {
   color: var(--bg);
 }
 
+.button-primary:hover {
+  background: color-mix(in oklch, var(--ink) 85%, var(--bg));
+}
+
+.button-light {
+  background: var(--body-ink);
+  color: var(--body);
+}
+
 .button-ghost {
   background: transparent;
   border: 1.5px solid var(--line);
+  border-radius: 15px;
   width: 100%;
-  height: 46px;
+  height: 48px;
   color: var(--muted);
 }
 
 .button-ghost:hover {
   color: var(--ink);
-  border-color: var(--ink);
+  border-color: color-mix(in oklch, var(--ink) 40%, var(--line));
+}
+
+.guess-box {
+  position: relative;
 }
 
 .suggestions {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: calc(100% + 6px);
+  top: calc(100% + 6px);
   margin: 0;
   padding: 4px;
   list-style: none;
   background: var(--surface);
-  border: 1.5px solid var(--line);
-  border-radius: 8px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
   box-shadow: var(--shadow);
   z-index: 5;
 }
 
 .suggestions li {
   padding: 10px 12px;
-  border-radius: 5px;
+  border-radius: 9px;
   cursor: pointer;
   font-size: 17px;
   color: var(--muted);
@@ -420,7 +661,7 @@ textarea {
   min-height: 22px;
   font-size: 15px;
   color: var(--miss);
-  margin: 6px 2px 8px;
+  margin: 6px 4px 8px;
 }
 
 .shake {
@@ -439,62 +680,182 @@ textarea {
   }
 }
 
-/* ---------- guesses ---------- */
+/* ---------- composing ---------- */
+/*
+ * Typing on a touch screen: the game becomes a fixed column the size of the visual viewport
+ * (what's left above the keyboard), so the browser has nothing to scroll. The viewfinder
+ * shrinks to the largest square that fits, and the suggestions become a row of chips
+ * just above the keyboard. Everything else steps aside until the keyboard goes.
+ */
+@media (pointer: coarse) {
+  .app:has(#guess:focus) {
+    position: fixed;
+    inset-inline: 0;
+    top: var(--vv-top, 0px);
+    height: var(--vv-height, 100dvh);
+    margin-inline: auto;
+    padding: calc(env(safe-area-inset-top, 0px) + 6px) 16px 6px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 0.25s var(--ease-out);
+  }
+
+  .app:has(#guess:focus) :is(.header, .scale, .guesses, .button-ghost) {
+    display: none;
+  }
+
+  .app:has(#guess:focus) .camera {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .app:has(#guess:focus) .camera-strip {
+    padding-block: 8px 7px;
+  }
+
+  .app:has(#guess:focus) .camera-lens {
+    flex: 1 1 auto;
+    min-height: 0;
+    container-type: size;
+    display: grid;
+    place-items: center;
+  }
+
+  .app:has(#guess:focus) .viewfinder {
+    width: min(100cqw, 100cqh);
+  }
+
+  .app:has(#guess:focus) .play {
+    flex: none;
+    margin-top: 10px;
+  }
+
+  .app:has(#guess:focus) .hint {
+    min-height: 0;
+    margin: 6px 4px 0;
+  }
+
+  .app:has(#guess:focus) .hint:empty {
+    margin: 0;
+  }
+
+  /*
+   * The chip row opens only when there's something to suggest. The viewfinder gives up the
+   * room as it slides open, re-framing the photo on every frame rather than jumping.
+   */
+  .app:has(#guess:focus) .suggestions,
+  .app:has(#guess:focus) .suggestions[hidden] {
+    position: static;
+    display: flex;
+    gap: 6px;
+    height: 52px;
+    margin-top: 8px;
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transition:
+      height 0.2s var(--ease-out),
+      margin-top 0.2s var(--ease-out);
+  }
+
+  .app:has(#guess:focus) .suggestions[hidden] {
+    height: 0;
+    margin-top: 0;
+    visibility: hidden;
+  }
+
+  .app:has(#guess:focus) .suggestions li {
+    flex: none;
+    display: grid;
+    place-items: center;
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 11px;
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    white-space: nowrap;
+  }
+
+  .app:has(#guess:focus) .suggestions li[aria-selected='true'] {
+    border-color: var(--ink);
+  }
+}
+
+/* ---------- frame log ---------- */
 .guesses {
   list-style: none;
-  margin: 14px 0 0;
+  margin: 20px 0 0;
   padding: 0;
-  display: grid;
-  gap: 6px;
+  border-top: 1px solid var(--line);
 }
 
 .guess {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.6em 3.4em 1fr auto;
   align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  background: var(--surface);
+  gap: 8px;
+  padding: 11px 4px;
+  border-bottom: 1px solid var(--line);
   font-size: 16px;
 }
 
-.guess-number {
+.guess:last-child {
+  animation: log-in 0.22s var(--ease-out);
+}
+
+@keyframes log-in {
+  from {
+    transform: translateY(-5px);
+  }
+}
+
+.guess-number,
+.guess-zoom {
+  font-family: var(--font-mono);
+  font-size: 12px;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
-  width: 1.2em;
 }
 
-.guess-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  flex: none;
-  background: var(--miss);
+.guess-text {
+  overflow-wrap: anywhere;
 }
 
-.guess-hit .guess-dot {
-  background: var(--hit);
-}
-
-.guess-skip .guess-dot {
-  background: var(--skip);
+.guess-miss .guess-text {
+  text-decoration: line-through;
+  text-decoration-color: var(--miss);
+  text-decoration-thickness: 1.5px;
 }
 
 .guess-skip .guess-text {
   color: var(--muted);
 }
 
+.guess-hit .guess-text {
+  font-weight: 700;
+}
+
 /* ---------- result ---------- */
 .result {
-  margin-top: 18px;
+  margin-top: 22px;
 }
 
 .result-title {
-  font-size: 34px;
+  font-size: 32px;
   line-height: 1.05;
   letter-spacing: -0.03em;
   font-weight: 800;
-  margin: 0 0 4px;
+  margin: 0 0 6px;
 }
 
 .result-sub {
@@ -502,29 +863,51 @@ textarea {
   color: var(--muted);
 }
 
-.result-fact {
-  margin: 14px 0 0;
-  padding: 12px 14px;
+.fact {
+  margin: 18px 0 0;
+  padding: 16px 18px 18px;
   background: var(--surface);
-  border-radius: 6px;
-  font-size: 16px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+}
+
+.fact-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.fact-label::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lens);
+}
+
+.fact p {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.4;
+  text-wrap: pretty;
 }
 
 .button-share {
   width: 100%;
-  height: 56px;
-  margin-top: 18px;
-  background: var(--hit);
-  color: var(--on-accent);
-  font-weight: 800;
-  font-size: 19px;
+  height: 54px;
+  margin-top: 16px;
+  border-radius: 15px;
+  font-size: 18px;
 }
 
 .manual {
   width: 100%;
   margin-top: 10px;
   min-height: 96px;
-  border-radius: 6px;
+  border-radius: 12px;
   border: 1.5px solid var(--line);
   background: var(--surface);
   padding: 10px;
@@ -539,33 +922,19 @@ textarea {
 .countdown {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  align-items: baseline;
+  margin-top: 14px;
   padding-top: 14px;
-  border-top: 1.5px solid var(--line);
+  border-top: 1px solid var(--line);
   color: var(--muted);
 }
 
 .countdown-time {
+  font-family: var(--font-mono);
+  font-size: 15px;
   color: var(--ink);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
-}
-
-/* ---------- placeholder ---------- */
-.placeholder {
-  margin-top: 18px;
-  text-align: center;
-}
-
-.placeholder h2 {
-  font-size: 28px;
-  letter-spacing: -0.02em;
-  margin: 18px 0 6px;
-}
-
-.placeholder p {
-  color: var(--muted);
-  margin: 0 0 16px;
 }
 
 /* ---------- toasts ---------- */
@@ -584,9 +953,17 @@ textarea {
   background: var(--ink);
   color: var(--bg);
   padding: 10px 16px;
-  border-radius: 6px;
+  border-radius: 12px;
   font-weight: 600;
   pointer-events: auto;
+  box-shadow: var(--shadow);
+  animation: toast-in 0.22s var(--ease-out);
+}
+
+@keyframes toast-in {
+  from {
+    transform: translateY(-8px);
+  }
 }
 
 .toast-action {
@@ -601,40 +978,56 @@ textarea {
 
 /* ---------- modals ---------- */
 .modal {
-  border: 0;
-  border-radius: 10px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
   padding: 0;
   max-width: 420px;
   width: calc(100% - 32px);
   background: var(--surface);
   color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.modal[open] {
+  animation: modal-in 0.22s var(--ease-out);
+}
+
+/* Entrances move but never fade: content is readable from the first frame, even if the animation stalls. */
+@keyframes modal-in {
+  from {
+    transform: translateY(10px) scale(0.98);
+  }
 }
 
 .modal::backdrop {
-  background: rgb(8 12 16 / 55%);
+  background: oklch(0.14 0.01 250 / 55%);
 }
 
 .modal-body {
-  padding: 22px;
+  padding: 20px 22px 22px;
 }
 
 .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin: 0 -10px 10px 0;
 }
 
 .modal-header h2 {
   margin: 0;
   font-size: 24px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   font-weight: 800;
+}
+
+.modal p {
+  text-wrap: pretty;
 }
 
 .modal-footnote {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   margin: 14px 0 0;
 }
 
@@ -643,42 +1036,32 @@ textarea {
   margin: 8px 0;
 }
 
+.rules li + li {
+  margin-top: 4px;
+}
+
 .key {
   display: flex;
-  gap: 14px;
+  gap: 8px 18px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--bg);
   font-size: 15px;
 }
 
 .key span {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-}
-
-.swatch {
-  width: 14px;
-  height: 14px;
-  border-radius: 2px;
-  display: inline-block;
-}
-
-.swatch-hit {
-  background: var(--hit);
-}
-
-.swatch-miss {
-  background: var(--miss);
-}
-
-.swatch-skip {
-  background: var(--skip);
+  gap: 8px;
 }
 
 .modal .button-primary {
   width: 100%;
+  height: 50px;
   margin-top: 18px;
+  border-radius: 13px;
 }
 
 /* ---------- stats ---------- */
@@ -687,14 +1070,15 @@ textarea {
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   gap: 6px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .stats-grid b {
   display: block;
-  font-size: 30px;
-  font-weight: 800;
-  line-height: 1.1;
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
   font-variant-numeric: tabular-nums;
 }
 
@@ -704,11 +1088,9 @@ textarea {
 }
 
 .dist-title {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 10px;
 }
 
 .dist {
@@ -721,7 +1103,8 @@ textarea {
   grid-template-columns: 18px 1fr;
   gap: 8px;
   align-items: center;
-  font-size: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -732,24 +1115,25 @@ textarea {
 .dist-bar {
   display: block;
   font-style: normal;
-  background: var(--muted);
-  color: var(--bg);
+  background: var(--line);
+  color: var(--ink);
   text-align: right;
-  padding: 1px 8px;
-  border-radius: 3px;
-  min-width: 26px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  min-width: 28px;
   font-weight: 600;
 }
 
 .dist-bar.is-mine {
-  background: var(--hit);
+  background: var(--ink);
+  color: var(--bg);
 }
 
 /* ---------- settings ---------- */
 .setting {
   border: 0;
   padding: 0;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
 .setting-row {
@@ -767,14 +1151,17 @@ textarea {
 
 .setting-hint {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
 }
 
 .segmented {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   margin-top: 8px;
+  padding: 4px;
+  border-radius: 13px;
+  background: var(--bg);
 }
 
 .segment {
@@ -790,15 +1177,26 @@ textarea {
 .segment span {
   display: grid;
   place-items: center;
-  height: 40px;
-  border-radius: 6px;
-  border: 1.5px solid var(--line);
+  height: 38px;
+  border-radius: 9px;
   cursor: pointer;
+  color: var(--muted);
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+
+.segment span:hover {
+  color: var(--ink);
 }
 
 .segment input:checked + span {
-  border-color: var(--ink);
+  background: var(--surface);
+  color: var(--ink);
   font-weight: 600;
+  box-shadow:
+    0 1px 2px oklch(0.2 0.02 250 / 14%),
+    0 0 0 1px var(--line);
 }
 
 .segment input:focus-visible + span {
@@ -810,7 +1208,7 @@ textarea {
   width: 48px;
   height: 28px;
   flex: none;
-  accent-color: var(--hit);
+  accent-color: var(--ink);
 }
 
 .setting-footer {
@@ -821,12 +1219,20 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   .viewfinder-photo,
-  .viewfinder.is-loading {
+  .viewfinder.is-loading,
+  .scale-index,
+  .app,
+  .suggestions,
+  .corner {
     transition: none;
     animation: none;
   }
 
-  .shake {
+  .shake,
+  .guess:last-child,
+  .scale-marks .mark,
+  .modal[open],
+  .toast {
     animation: none;
   }
 }

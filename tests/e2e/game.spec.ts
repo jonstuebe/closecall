@@ -21,8 +21,28 @@ test('a wrong guess spends a try and zooms out @mobile', async ({ page }) => {
 
   await guess(page, 'fox');
   await expect(page.getByText('Try 2 of 6')).toBeVisible();
+  // On touch the field keeps focus (and the keyboard) between Tries, with the log stepped aside.
+  await page.getByRole('combobox').blur();
   await expect(page.getByRole('listitem').filter({ hasText: 'fox' })).toBeVisible();
   await expect.poll(() => photo.getAttribute('style')).not.toBe(before);
+});
+
+test('typing on a phone keeps the photo and suggestions above the keyboard @mobile', async ({ page, isMobile }) => {
+  test.skip(!isMobile, 'Compose mode is for touch screens');
+  await openGame(page);
+  const field = page.getByRole('combobox');
+  await field.focus();
+  await expect(page.getByRole('heading', { name: 'Close Call' })).toBeHidden();
+
+  await field.pressSequentially('fo');
+  const box = await field.boundingBox();
+  const option = await page.getByRole('option').first().boundingBox();
+  const photo = await page.locator('.viewfinder').boundingBox();
+  expect(option!.y).toBeGreaterThan(box!.y + box!.height);
+  expect(photo!.y + photo!.height).toBeLessThanOrEqual(box!.y);
+
+  await field.blur();
+  await expect(page.getByRole('heading', { name: 'Close Call' })).toBeVisible();
 });
 
 test('refuses an empty or repeated guess without spending a try', async ({ page }) => {

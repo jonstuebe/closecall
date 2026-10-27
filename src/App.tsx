@@ -5,8 +5,10 @@ import { MAX_TRIES } from './lib/guessing';
 import { loadState, recordFor, recordResult, saveState, type GameState, type PuzzleRecord, type Settings } from './lib/storage';
 import { applyUpdate, onUpdateAvailable } from './lib/pwa';
 import { usePrefersReducedMotion } from './lib/usePrefersReducedMotion';
+import { useVisualViewport } from './lib/useVisualViewport';
 import { Header } from './components/Header';
 import { Game } from './components/Game';
+import { Camera } from './components/Camera';
 import { HelpModal } from './components/HelpModal';
 import { StatsModal } from './components/StatsModal';
 import { SettingsModal } from './components/SettingsModal';
@@ -28,6 +30,7 @@ export function App() {
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
   const [liveMessage, setLiveMessage] = useState('');
   const reducedMotion = usePrefersReducedMotion();
+  useVisualViewport();
 
   useEffect(() => saveState(state), [state]);
 
@@ -139,19 +142,12 @@ export function App() {
     <div className="app">
       <Header onHelp={() => setModal('help')} onStats={() => setModal('stats')} onSettings={() => setModal('settings')} />
 
-      <div className="meta">
-        <span>
-          {puzzleNumber === null ? 'Close Call' : <strong>No. {puzzleNumber}</strong>}
-          {puzzleNumber === null ? null : `, ${formatPuzzleDate(now)}`}
-        </span>
-        <span>{record?.status === 'playing' ? `Try ${record.guesses.length + 1} of ${MAX_TRIES}` : ''}</span>
-      </div>
-
       {daily.status === 'ready' ? (
         <Game
           key={daily.number}
           puzzle={daily.puzzle}
           puzzleNumber={daily.number}
+          date={formatPuzzleDate(now)}
           record={recordFor(state, daily.number)}
           onRecord={onRecord}
           onAnnounce={setLiveMessage}
@@ -160,7 +156,7 @@ export function App() {
           reducedMotion={reducedMotion}
         />
       ) : (
-        <Placeholder status={daily.status} onRetry={retry} />
+        <Placeholder status={daily.status} number={puzzleNumber} date={formatPuzzleDate(now)} onRetry={retry} />
       )}
 
       <p className="sr-only" aria-live="polite">
@@ -175,30 +171,45 @@ export function App() {
   );
 }
 
-function Placeholder({ status, onRetry }: { status: 'loading' | 'none' | 'offline'; onRetry: () => void }) {
+function Placeholder({
+  status,
+  number,
+  date,
+  onRetry,
+}: {
+  status: 'loading' | 'none' | 'offline';
+  number: number | null;
+  date: string;
+  onRetry: () => void;
+}) {
   if (status === 'loading') {
     return (
-      <div className="placeholder" role="status">
-        <div className="viewfinder is-loading" />
-        <p>Focusing…</p>
-      </div>
-    );
-  }
-  if (status === 'none') {
-    return (
-      <div className="placeholder">
-        <h2>Back tomorrow</h2>
-        <p>There’s no close call for today. Check again after midnight.</p>
-      </div>
+      <Camera number={number} date={date} status="Focusing…">
+        <div className="viewfinder is-loading" role="status">
+          <span className="reticle" />
+          <span className="sr-only">Focusing…</span>
+        </div>
+      </Camera>
     );
   }
   return (
-    <div className="placeholder">
-      <h2>No connection</h2>
-      <p>Close Call needs the network once a day to collect today’s photo.</p>
-      <button className="button button-primary" type="button" onClick={onRetry}>
-        Try again
-      </button>
-    </div>
+    <Camera number={number} date={date}>
+      <div className="viewfinder is-empty">
+        {status === 'none' ? (
+          <div className="viewfinder-message">
+            <h2>Back tomorrow</h2>
+            <p>There’s no close call for today. Check again after midnight.</p>
+          </div>
+        ) : (
+          <div className="viewfinder-message">
+            <h2>No connection</h2>
+            <p>Close Call needs the network once a day to collect today’s photo.</p>
+            <button className="button button-light" type="button" onClick={onRetry}>
+              Try again
+            </button>
+          </div>
+        )}
+      </div>
+    </Camera>
   );
 }

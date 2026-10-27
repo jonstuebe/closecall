@@ -42,11 +42,12 @@ export function Result({ puzzle, puzzleNumber, won, tries, results, onExpire, on
       <h2 className="result-title">{won ? `${capitalize(puzzle.display)}!` : `It was ${puzzle.display}.`}</h2>
       <p className="result-sub">{subtitle(won, tries)}</p>
       {puzzle.fact ? (
-        <p className="result-fact">
-          <strong>Did you know?</strong> {puzzle.fact}
-        </p>
+        <aside className="fact">
+          <h3 className="fact-label">Did you know?</h3>
+          <p>{puzzle.fact}</p>
+        </aside>
       ) : null}
-      <button className="button button-share" type="button" onClick={share}>
+      <button className="button button-primary button-share" type="button" onClick={share}>
         Share
         <ShareIcon />
       </button>
