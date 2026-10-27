@@ -12,6 +12,7 @@
     "test:e2e": "playwright test",
     "icons": "node scripts/make-icons.mjs",
     "photos": "node scripts/add-photo.mjs",
+    "find-photos": "node scripts/find-photos.mjs",
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
